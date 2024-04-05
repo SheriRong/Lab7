@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+ <h1 style="text-align:center;font-family:verdana;">Practice 2 </h1>
+  <div id ="p">Hi, here is the testing for RGB, RGB, RGB, RGB...</div>
+<form id ="firstForm"> 
+  <label for="borderR">Border R(0-255):</label>
+  <input type="text" id ="borderR" name = "borderR"><br>
+    <label for="borderG">Border G(0-255):</label>
+    <input type="text" id ="borderG" name = "borderG"><br>
+    <label for="borderB">Border B(0-255):</label>
+    <input type="text" id ="borderB" name = "borderB"><br>
+    <label for="borderW">Border Width:</label>
+    <input type="text" id ="borderW" name = "borderW"><br>
+    <label for="backR">Background R(0-255):</label>
+    <input type="text" id ="backR" name = "backR"><br>
+    <label for="backG">Background G(0-255):</label>
+    <input type="text" id ="backG" name = "backG"><br>
+    <label for="backB">Background B(0-255):</label>
+    <input type="text" id ="backB" name = "backB"><br>
+  </form>
+ <button id="changeText" type ="button"> Change the color!</button>
+<script>
+  var p1 = document.getElementById("p");
+  var r1 = document.getElementById("borderR");
+  var g1 = document.getElementById("borderG");
+  var b1 = document.getElementById("borderB");
+  var r2 = document.getElementById("backR");
+  var g2 = document.getElementById("backG");
+  var b2 = document.getElementById("backB");
+  var w1 = document.getElementById("borderW");
+  document.getElementById ("changeText").addEventListener("click", function () {
+      console.log("Changing text...");
+      console.log("Border R:", r1.value);
+      console.log("Border G:", g1.value);
+      console.log("Border B:", b1.value);
+      console.log("Background R:", r2.value);
+      console.log("Background G:", g2.value);
+      console.log("Background B:", b2.value);
+      console.log("Border Width:", w1.value);
+      p1.style.borderStyle = "solid";
+      p1.style.borderColor = "rgb(" + r1.value + "," + g1.value + "," + b1.value + ")";
+      p1.style.backgroundColor = "rgb(" + r2.value + "," + g2.value + "," + b2.value + ")";
+      p1.style.borderWidth =  + w1.value + "px";
+    });
+  
+  
+  
+</script>
+</body>
+
+</html>

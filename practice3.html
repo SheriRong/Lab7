@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1 style="color:black;text-align:center;font-family:verdana;">Practice 3</h1>
+</body>
+  <form>
+    <label for="firstPassword"> First Password:</label>
+    <input type="text" id ="firstPassword" name="firstPassword"><br>
+    <label for="secondPassword">Second Password:</label>
+    <input type="text" id ="secondPassword" name ="secondPassword"><br>
+    <button type ="button" onclick = "checkPasswords()"> Validate your passwords</button> 
+  </form>
+  <script>
+    function checkPasswords(){
+      var firstPass = document.getElementById("firstPassword").value;
+      var secondPass = document.getElementById("secondPassword").value;
+      if (firstPass == secondPass && firstPass.length >=8){
+        alert("Everything looks good!");
+      }
+      else if(firstPass.length<8){
+        alert("The length of the first password is less than 8!");
+      }
+      else{
+        alert("The passwords don't match!");
+      }
+    }
+  </script>
+
+</html>
